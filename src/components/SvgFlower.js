@@ -1,5 +1,5 @@
-import Flower from "@/components/Flower";
-import { otherWrapper } from "@/config";
+import Flower from "./Flower";
+import { otherWrapper } from "../config";
 
 export default class SvgFlower {
   constructor(el) {

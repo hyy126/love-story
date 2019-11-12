@@ -4,19 +4,20 @@
  * @author Hyy
  *
  * Created at     : 2019-11-04 14:34:13
- * Last modified  : 2019-11-08 10:55:52
+ * Last modified  : 2019-11-12 19:37:03
  */
 
-import HeartManage from "@/components/HeartManage";
-import FlyFlower from "@/components/FlyFlower";
-//import SvgFlower from "@/components/SvgFlower";
-import SvgFlowerBySnap from "@/components/SvgFlowerBySnap";
-import translateClient from "@/helper/transform";
-import { StoryData } from "@/data/StoryData";
-import storyDataHandler, { showAllStory } from "@/helper/storyDataHandler";
-import { createSvgEl } from "@/helper/createSvgEl";
-import { heartWrapper, otherWrapper, scale } from "@/config";
-import { STATUSCONST, global, changeGlobalValue } from "@/config/global";
+import HeartManage from "./components/HeartManage";
+import FlyFlower from "./components/FlyFlower";
+//import SvgFlower from "./components/SvgFlower";
+import SvgFlowerBySnap from "./components/SvgFlowerBySnap";
+import translateClient from "./helper/transform";
+import { StoryData } from "./data/StoryData";
+import storyDataHandler, { showAllStory } from "./helper/storyDataHandler";
+import { createSvgEl } from "./helper/createSvgEl";
+import { heartWrapper, otherWrapper, scale, CloudAddress } from "./config";
+import { STATUSCONST, global, changeGlobalValue } from "./config/global";
+import waitLoad from "./helper/load";
 
 //初始化页面点击
 bindInitClick();
@@ -75,15 +76,40 @@ function showFirstStory() {
 // 进入主界面
 function bindInitClick() {
   const btn = document.getElementById("enterStoryBtn");
+  const loading = document.querySelector("#bars-loading");
   const loadingPage = document.querySelector(".loadingPage");
 
-  //背景音乐
-  const audio = document.createElement("audio");
-  audio.src = "../public/music/lu.mp3";
-  audio.loop = true;
-  audio.preload = true;
+  function showStart() {
+    loading.style.display = "none";
+    btn.style.display = "inline-block";
+    console.log("ready");
+  }
+
+  // 等待资源加载完毕
+  waitLoad({
+    data: {
+      video: ["love-story.mp3"],
+      img: ["flowers.png", "woodbac.jpg"]
+    },
+    callback: (cur, total) => {
+      console.log(cur, total);
+      if (cur === total) {
+        showStart();
+      }
+    },
+    prefix: CloudAddress
+  });
 
   btn.addEventListener("click", function(e) {
+    initplay();
+  });
+
+  function initplay() {
+    //背景音乐
+    const audio = document.createElement("audio");
+    audio.src = `${CloudAddress}love-story.mp3`;
+    audio.loop = true;
+
     loadingPage.classList.add("opacity-change-reverse");
     setTimeout(() => {
       loadingPage.style.zIndex = 1;
@@ -95,7 +121,7 @@ function bindInitClick() {
       changeGlobalValue("status", STATUSCONST.HEARTFLY);
       //showFirstStory();
     }, 4000);
-  });
+  }
 }
 
 document.addEventListener("keydown", event => {

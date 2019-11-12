@@ -1,5 +1,5 @@
-import { otherWrapper } from "@/config";
-import { wWidth, wHeight } from "@/config";
+import { otherWrapper } from "../config";
+import { wWidth, wHeight } from "../config";
 
 export let svgPathArray = [];
 

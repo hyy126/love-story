@@ -4,10 +4,10 @@
  * @author Hyy
  *
  * Created at     : 2019-11-06 10:34:41
- * Last modified  : 2019-11-06 10:35:49
+ * Last modified  : 2019-11-12 19:37:57
  */
 
-import { wWidth, wHeight } from "@/config";
+import { wWidth, wHeight } from "../config";
 
 // 花瓣图片里每个花瓣的大小px
 const flowerSize = {

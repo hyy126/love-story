@@ -1,4 +1,4 @@
-import "@/assets/styles/index.scss";
+import "./assets/styles/index.scss";
 import Snap from "snapsvg";
 window.Snap = Snap;
-import "@/main";
+import "./main";

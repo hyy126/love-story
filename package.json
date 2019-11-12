@@ -2,9 +2,12 @@
   "name": "webpack-starter",
   "version": "1.0.0",
   "description": "A light foundation for your next frontend project based on webpack.",
+  "main": "dist/love-story.umd.js",
+  "module": "dist/love-story.es5.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js  --colors",
-    "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js"
+    "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js",
+    "rollup": "rollup -c rollup.config.js"
   },
   "repository": {
     "type": "git",
@@ -38,6 +41,7 @@
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "^4.0.0-beta.8",
     "imports-loader": "^0.8.0",
+    "lodash.camelcase": "^4.3.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
@@ -45,12 +49,12 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.9.0",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^4.2.2",
+    "@babel/polyfill": "^7.6.0",
+    "core-js": "^3.3.4"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.6.0",
     "animejs": "^3.1.0",
-    "core-js": "^3.3.4",
     "snapsvg": "^0.5.1"
   }
 }

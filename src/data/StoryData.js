@@ -12,22 +12,8 @@ import {
   URightLeft,
   UleftTop,
   URightTop
-} from "@/config";
+} from "../config";
 
-// const ItopLeft = 144;
-// const ItopTop = 150;
-
-// const ImidLeft = 230;
-// const ImidTop = 200;
-
-// const IbottomLeft = 144;
-// const IbottomTop = 530;
-
-// const UleftLeft = 1080;
-// const UleftTop = 150;
-
-// const URightLeft = 1420;
-// const URightTop = 150;
 const storyText = [
   "人生就像一场漂流",
   "曾经的阿狸是那么地无忧无虑,每天睡到自然醒",

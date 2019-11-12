@@ -3,11 +3,11 @@
  * @author Hyy
  *
  * Created at     : 2019-11-01 14:29:42
- * Last modified  : 2019-11-08 13:54:45
+ * Last modified  : 2019-11-12 19:42:47
  */
 
-import { tragEl } from "@/config";
-import { global, changeGlobalValue } from "@/config/global";
+import { tragEl } from "../config";
+import { global, changeGlobalValue } from "../config/global";
 
 export default function translateClient(transformX, transformY, scale) {
   if (scale) {

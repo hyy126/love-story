@@ -1,6 +1,6 @@
-import Flower from "@/components/Flower";
-import { otherWrapper, widthRate } from "@/config";
-import { svgPathArray } from "@/helper/createSvgEl";
+import Flower from "./Flower";
+import { otherWrapper, widthRate } from "../config";
+import { svgPathArray } from "../helper/createSvgEl";
 
 export default class SvgFlower {
   constructor(time) {

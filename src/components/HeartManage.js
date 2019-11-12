@@ -3,13 +3,13 @@
  * @author Hyy
  *
  * Created at     : 2019-11-02 10:56:38
- * Last modified  : 2019-11-07 15:06:12
+ * Last modified  : 2019-11-12 19:39:03
  */
 
-import { wWidth, wHeight, widthRate } from "@/config";
+import { wWidth, wHeight, widthRate } from "../config";
 import Flower from "./Flower";
-import { pointInPolygon, createHeartPolygon } from "@/helper";
-import { simpleCopy } from "@/util";
+import { pointInPolygon, createHeartPolygon } from "../helper";
+import { simpleCopy } from "../util";
 
 const heartWidth = 700;
 const heartHeight = 700;

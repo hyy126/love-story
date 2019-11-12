@@ -1,9 +1,9 @@
-import Flower from "@/components/Flower";
-import translateClient from "@/helper/transform";
-import { wWidth, wHeight, scale } from "@/config";
-import { global, changeGlobalValue, STATUSCONST } from "@/config/global";
+import Flower from "./Flower";
+import translateClient from "../helper/transform";
+import { wWidth, wHeight, scale } from "../config";
+import { global, changeGlobalValue, STATUSCONST } from "../config/global";
 import anime from "animejs/lib/anime.es.js";
-import { simpleCopy } from "@/util";
+import { simpleCopy } from "../util";
 
 const defaultOptions = {
   elWrapper: null,

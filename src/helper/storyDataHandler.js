@@ -1,11 +1,11 @@
-import translateClient from "@/helper/transform";
-import { imgWidth, imgHeight, tragEl, scale } from "@/config";
+import translateClient from "./transform";
+import { imgWidth, imgHeight, tragEl, scale, CloudAddress } from "../config";
 /**
  * @summary handler photo list data set width height background transfrom and el
  * @author Hyy
  *
  * Created at     : 2019-11-01 10:54:04
- * Last modified  : 2019-11-08 21:26:38
+ * Last modified  : 2019-11-12 19:42:36
  */
 export default function storyDataHandler(storyData, { hide, clickhandler }) {
   //统计  15倍下 元素的BoundingClientRect
@@ -21,7 +21,8 @@ export default function storyDataHandler(storyData, { hide, clickhandler }) {
     if (hide) {
       el.style.visibility = "hidden";
     }
-    el.style.backgroundImage = `url(./public/img/story/${story.url}.png)`;
+    el.style.backgroundImage = `url(${CloudAddress}${story.url}.jpg`;
+    //el.style.backgroundImage = `url(./public/img/story/${story.url}.png)`;
     el.style.transform = `translate(${story.left}px,${story.top}px)`;
     el.innerHTML = `<div class="desc" style='${story.textStyle}'>${story.text}</div>`;
     story.el = el;
