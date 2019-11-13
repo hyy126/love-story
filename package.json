@@ -1,31 +1,32 @@
 {
-  "name": "webpack-starter",
+  "name": "love-story-hyy",
   "version": "1.0.0",
-  "description": "A light foundation for your next frontend project based on webpack.",
-  "main": "dist/love-story.umd.js",
-  "module": "dist/love-story.es5.js",
+  "description": "a application for express love",
+  "files": [
+    "build",
+    "src"
+  ],
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js  --colors",
-    "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js",
-    "rollup": "rollup -c rollup.config.js"
+    "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wbkd/webpack-starter.git"
+    "url": "git+https://github.com/hyy126/love-story.git"
   },
+  "bugs": {
+    "url": "https://github.com/hyy126/love-story/issues"
+  },
+  "homepage": "https://github.com/hyy126/love-story#readme",
   "keywords": [
-    "webpack",
-    "startkit",
+    "love",
+    "template",
     "frontend",
     "es6",
-    "javascript",
-    "webdev"
+    "javascript"
   ],
-  "author": "webkid.io",
+  "author": "hyy126",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/wbkd/webpack-starter/issues"
-  },
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
