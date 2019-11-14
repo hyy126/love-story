@@ -10,7 +10,7 @@ a application for express love
 
 ## Show
 
-![avatar](https://love-story.oss-cn-shanghai.aliyuncs.com/love.jpg)
+![image](https://github.com/hyy126/love-story/tree/master/public/img/love.jpg)
 
 ## Usage
 
