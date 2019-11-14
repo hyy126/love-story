@@ -2,10 +2,10 @@ language: node_js
 node_js:
   - node
 script: npm run build
-before_install:
-  - openssl aes-256-cbc -K $encrypted_ea0f7c5026d4_key -iv $encrypted_ea0f7c5026d4_iv
-  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
-  - chmod 600 ~/.ssh/id_rsa
+# before_install:
+#   - openssl aes-256-cbc -K $encrypted_ea0f7c5026d4_key -iv $encrypted_ea0f7c5026d4_iv
+#   -in id_rsa.enc -out ~\/.ssh/id_rsa -d
+#   - chmod 600 ~/.ssh/id_rsa
 
 addons:
   ssh_known_hosts: 122.51.194.65

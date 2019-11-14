@@ -3,7 +3,7 @@
  * @author Hyy
  *
  * Created at     : 2019-11-02 10:56:38
- * Last modified  : 2019-11-12 19:39:03
+ * Last modified  : 2019-11-14 09:35:39
  */
 
 import { wWidth, wHeight, widthRate } from "../config";
@@ -79,6 +79,7 @@ export default class HeartManage {
         this.addFlower();
       }
     }
+    this.heartCount = 0;
     this.fillHeartByHeart();
     this.flowerList.forEach(flower => {
       this.heartWrapper.append(flower.el);
