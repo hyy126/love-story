@@ -3,7 +3,7 @@
  * @author Hyy
  *
  * Created at     : 2019-11-02 10:56:38
- * Last modified  : 2019-11-14 09:35:39
+ * Last modified  : 2019-11-14 10:28:13
  */
 
 import { wWidth, wHeight, widthRate } from "../config";
@@ -69,6 +69,8 @@ export default class HeartManage {
     this.initFlower();
   }
   initFlower() {
+    this.heartPolygon = [];
+    this.heartCount = 0;
     while (this.heartCount < this.maxHeartCount) {
       if (this.heartAngle > 2 * Math.PI) {
         this.heartCount++;
@@ -79,14 +81,15 @@ export default class HeartManage {
         this.addFlower();
       }
     }
-    this.heartCount = 0;
     this.fillHeartByHeart();
     this.flowerList.forEach(flower => {
       this.heartWrapper.append(flower.el);
     });
   }
   fillHeartByHeart() {
-    window.heartPolygon = this.heartPolygon;
+    if (!window.heartPolygon) {
+      window.heartPolygon = this.heartPolygon;
+    }
     while (this.flowerList.length < this.maxFlowerCount) {
       this.createPointInHeart();
     }
