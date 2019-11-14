@@ -7,8 +7,8 @@ script: npm run build
 #   -in id_rsa.enc -out ~\/.ssh/id_rsa -d
 #   - chmod 600 ~/.ssh/id_rsa
 
-addons:
-  ssh_known_hosts: 122.51.194.65
+# addons:
+#   ssh_known_hosts: 122.51.194.65
 
-after_success:
-  - ssh root@122.51.194.65 "./update-script"
+# after_success:
+#   - ssh root@122.51.194.65 "./update-script"
