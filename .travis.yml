@@ -10,5 +10,5 @@ script: npm run build
 # addons:
 #   ssh_known_hosts: 122.51.194.65
 
-# after_success:
-#   - ssh root@122.51.194.65 "./update-script"
+after_success:
+  - ssh root@122.51.194.65 "./update-script"
